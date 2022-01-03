@@ -1,53 +1,12 @@
-# Welcome to Remix!
+# Exploring Remix
 
-- [Remix Docs](https://remix.run/docs)
+To start the app run `npm run dev`.
 
-## Development
+I've seen Remix mentioned a few times now, which is usually my signal to spend a little bit of time playing around with it to see what it's all about. I followed the [15 Minute Introductory Tutorial](https://remix.run/docs/en/v1/tutorials/blog) and had a great time with it. 
 
-From your terminal:
+For context, my experience of web development up to this point is mostly React frontend development talking to a Django Python API. The appeal (and selling point) of Remix is the merging of those two pieces into one framework. I was curious what the difference would be between the traditional Django serverside rendered applications, after having spent some time with Remix my current opinion is that it's no different, it's just a lot more "Reacty" than Django templating which makes frontend development a lot easier and more pleasant to work with.
 
-```sh
-npm run dev
-```
-
-This starts your app in development mode, rebuilding assets on file changes.
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
-### Using a Template
-
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```
+# Thoughts (In no particular order)
+ - I like the JSX and that it has the look and feel of simple HTML. Templating in JSX is very familiar to me due to React, and it felt natural building out FE pages.
+ - I really like the BE being right next to the FE. I am tired of opening up the Django BE API in another window, making changes, verifying the output is as expected, then making changes to a React FE component to fetch that data, display it etc. BE/FE communications can get very chatty when data is being submitted, particularly if data validation is being done on the backend and must be communicated back to the frontend. With Remix I was making a change at the top of the file, then simply scrolling down to edit the FE. It's very clear how the code is separated out, the function Post() for example is the part that renders the UI, much like in React. The loader() and action() functions define the BE behaviour. I think I still need to get my head around exactly which bits of code run on the FE, and which on the BE, but in my mind the Posts() function was for FE and the other two were for BE logic, clearly delineating the two and making it easy to think about information flow between them.
+ - 
