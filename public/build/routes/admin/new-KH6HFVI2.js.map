@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/harry/repos/remix_explore/app/routes/admin/new.tsx?browser"],
+  "sourcesContent": ["export * from \"/home/harry/repos/remix_explore/app/routes/admin/new.tsx\";"],
+  "mappings": ";;;;;AAAA;",
+  "names": []
+}

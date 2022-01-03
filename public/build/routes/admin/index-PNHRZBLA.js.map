@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/harry/repos/remix_explore/app/routes/admin/index.tsx?browser", "../../../../app/routes/admin/index.tsx"],
+  "sourcesContent": ["export { default } from \"/home/harry/repos/remix_explore/app/routes/admin/index.tsx\";", "export default function AdminIndex() {\n  return <p>Nothing to display. Click a post to edit it.</p>;\n}\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AAAe,sBAAsB;AACnC,SAAO,oCAAC,KAAD,MAAG;AAAA;",
+  "names": []
+}

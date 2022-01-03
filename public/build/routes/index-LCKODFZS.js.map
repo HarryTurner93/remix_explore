@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/harry/repos/remix_explore/app/routes/index.tsx?browser", "../../../app/routes/index.tsx"],
+  "sourcesContent": ["export { default } from \"/home/harry/repos/remix_explore/app/routes/index.tsx\";", "import { Link, useLoaderData, Outlet } from \"remix\";\nimport { getPosts } from \"~/post\";\nimport type { Post } from \"~/post\";\n\nexport const loader = () => {\n  return getPosts();\n};\n\nexport default function Index() {\n  const posts = useLoaderData<Post[]>();\n  return (\n    <div>\n      <h1>My Remix Posts App</h1>\n      <ul>\n        {posts.map((post) => (\n          <li key={post.slug}>\n            <Link to={`posts/${post.slug}`}>{post.title}</Link>\n          </li>\n        ))}\n      </ul>\n    </div>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;AAAA;;;ACAA;AAQe,iBAAiB;AAC9B,QAAM,QAAQ;AACd,SACE,oCAAC,OAAD,MACE,oCAAC,MAAD,MAAI,uBACJ,oCAAC,MAAD,MACG,MAAM,IAAI,CAAC,SACV,oCAAC,MAAD;AAAA,IAAI,KAAK,KAAK;AAAA,KACZ,oCAAC,MAAD;AAAA,IAAM,IAAI,SAAS,KAAK;AAAA,KAAS,KAAK;AAAA;",
+  "names": []
+}
